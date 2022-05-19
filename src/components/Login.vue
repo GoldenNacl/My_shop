@@ -17,7 +17,7 @@
         </el-form-item>
         <!-- 按钮 -->
         <el-form-item class="btns">
-          <el-button type="primary">登录</el-button>
+          <el-button type="primary" @click="submit">登录</el-button>
            <el-button type="info">重置</el-button>
         </el-form-item>
       </el-form>
@@ -35,6 +35,11 @@ export default {
         username: '',
         password: ''
       }
+    }
+  },
+  methods: {
+    submit () {
+      console.log('pressed')
     }
   }
 }
