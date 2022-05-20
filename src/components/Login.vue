@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     submit () {
-      console.log('pressed')
+      console.log('登录')
     }
   }
 }
