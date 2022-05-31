@@ -64,9 +64,11 @@ export default {
         // 发送登录请求
         const { data: res } = await this.$http.post('login', this.loginForm)
         if (res.meta.status !== 200) {
-          return console.log('登录失败')
+          return this.$message.error('用户名或密码错误')
         }
-        console.log('登录成功')
+        this.$message.success('登录成功')
+        window.sessionStorage.setItem('token', res.data.token)
+        this.$router.push('/home')
       })
     }
   }
